@@ -54,7 +54,6 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
 
         mBarBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mBarBorderPaint.setStyle(Paint.Style.STROKE);
-        mBarBorderPaint.setStrokeCap(Paint.Cap.ROUND);
     }
 
     @Override
@@ -156,9 +155,7 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
         final boolean isSingleColor = dataSet.getColors().size() == 1;
 
         if (isSingleColor) {
-            // mRenderPaint.setColor(dataSet.getColor());
-            mRenderPaint.setColor(Color.BLUE);
-
+             mRenderPaint.setColor(dataSet.getColor());
         }
 
         for (int j = 0; j < buffer.size(); j += 4) {
@@ -172,8 +169,7 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
             if (!isSingleColor) {
                 // Set the color for the currently drawn value. If the index
                 // is out of bounds, reuse colors.
-                // mRenderPaint.setColor(dataSet.getColor(j / 4));
-                  mRenderPaint.setColor(Color.BLUE);
+                 mRenderPaint.setColor(dataSet.getColor(j / 4));
             }
 
             if (dataSet.getGradientColor() != null) {
