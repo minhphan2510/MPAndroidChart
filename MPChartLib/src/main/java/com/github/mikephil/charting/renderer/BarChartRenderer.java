@@ -212,7 +212,6 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
                         c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1], buffer.buffer[j + 2],
                                 buffer.buffer[j + 3] - 10  , 20.0f, 20.0f, mRenderPaint);
                     }
-
                 }else{
                     if(bufferTemp[j+1] == 0){
                         // for 0 value
