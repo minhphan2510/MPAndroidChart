@@ -200,23 +200,27 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
             // for dashboard screen
             if (barWidth < 0.5) {
                 if (index == 0) {
-                    if (bufferTemp[j + 1] == 0) {
-                        // for 0 value
-                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] - 20, buffer.buffer[j + 2],
-                                buffer.buffer[j + 3] - 10, 20.0f, 20.0f, mRenderPaint);
-                    } else {
-                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1], buffer.buffer[j + 2],
-                                buffer.buffer[j + 3] - 10, 20.0f, 20.0f, mRenderPaint);
-                    }
+                    c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1], buffer.buffer[j + 2],
+                            buffer.buffer[j + 3] - 10, 20.0f, 20.0f, mRenderPaint);
+//                    if (bufferTemp[j + 1] == 0) {
+//                        // for 0 value
+//                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] - 20, buffer.buffer[j + 2],
+//                                buffer.buffer[j + 3] - 10, 20.0f, 20.0f, mRenderPaint);
+//                    } else {
+//                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1], buffer.buffer[j + 2],
+//                                buffer.buffer[j + 3] - 10, 20.0f, 20.0f, mRenderPaint);
+//                    }
                 } else {
-                    if (bufferTemp[j + 1] == 0) {
-                        // for 0 value
-                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] + 10, buffer.buffer[j + 2],
-                                buffer.buffer[j + 3] + 20, 20.0f, 20.0f, mRenderPaint);
-                    } else {
-                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] + 10, buffer.buffer[j + 2],
-                                buffer.buffer[j + 3], 20.0f, 20.0f, mRenderPaint);
-                    }
+                    c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] + 10, buffer.buffer[j + 2],
+                            buffer.buffer[j + 3], 20.0f, 20.0f, mRenderPaint);
+//                    if (bufferTemp[j + 1] == 0) {
+//                        // for 0 value
+//                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] + 10, buffer.buffer[j + 2],
+//                                buffer.buffer[j + 3] + 20, 20.0f, 20.0f, mRenderPaint);
+//                    } else {
+//                        c.drawRoundRect(buffer.buffer[j], buffer.buffer[j + 1] + 10, buffer.buffer[j + 2],
+//                                buffer.buffer[j + 3], 20.0f, 20.0f, mRenderPaint);
+//                    }
                 }
             } else {
                 c.drawRect(buffer.buffer[j], buffer.buffer[j + 1], buffer.buffer[j + 2],
